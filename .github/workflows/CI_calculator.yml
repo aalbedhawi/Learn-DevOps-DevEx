@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: run the tests for the calculator app
-        run: python calc_unit_test.py
+        run: python calc_unit_test.p
       - name: send alert on failure to discord channel
         uses: tsickert/discord-webhook@v7.0.0
         if: failure()  
