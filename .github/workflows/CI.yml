@@ -11,10 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/ruff-action@v3
-      - name: install ruff
-        run: pip install ruff
-      - name: run ruff linter
-        run: ruff check --output-format=github
       - name: run the tests for the calculator app
         run: python calc_unit_test.py
       - name: send alert on failure to discord channel
