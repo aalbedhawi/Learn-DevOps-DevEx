@@ -13,7 +13,7 @@ jobs:
       - name: run the tests for the calculator app
         run: python calc_unit_test.py
       - name: send alert on failure to discord channel
-        uses: LearnGithubActions/discord-webhook-notify@v1
+        uses: aalbedhawi/LearnGithubActions@v1
         if: failure()  
         with:
           severity: fail
