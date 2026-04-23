@@ -9,10 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/ruff-action@v3
-      - name: run the tests for the calculator app
-        run: python calc_unit_test.py
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run linters
+        uses: astral-sh/ruff-action@v3
+      
+      - name: Run testing and ensure code coverage
+        run: pytest --cov=mycalculator --cov-fail-under=80 calc_unit_test.py
+        
       - name: send alert on failure to discord channel
         uses: tsickert/discord-webhook@v7.0.0
         if: failure()  
