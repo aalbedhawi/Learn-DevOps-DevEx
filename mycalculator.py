@@ -16,7 +16,7 @@ class UserInteractions:
             except ValueError:
                 print("Invalid Entry")
 
-    def quit(self, option):
+    def quit(self):
         print("Exiting Program")
         sys.exit()
 
@@ -56,6 +56,8 @@ class UserInteractions:
 
             if user_option == "8":
                 continue
+            elif user_option == "9":
+                self.quit()
             elif user_option in actions:
                 actions[user_option](self.numbers)
             else:
@@ -102,12 +104,12 @@ class MathOperations:
             raise ValueError("Cannot take the square root of a negative number")
 
 
-def main():
+def main(): # pragma: no cover
     math = MathOperations()
     ui = UserInteractions(math)
 
     ui.menu()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
     main()
