@@ -10,6 +10,7 @@ This project was made to learn how the following work and how to build them:
 6. Pre-commit hooks
 7. Linters
 8. Code Coverage
+9. Docker
 
 Running this project required making changes to the 2 files within the repo, pushing up the changes, allowing the pipeline to run, and monitor the outcome.
 On failure this project will send an alert to my discord channel alerting that the build is broken and requires a fix. 
@@ -40,11 +41,8 @@ Running both the calculator and unittests can be done via:
   python mycalculator.py
   python calc_unit_test.py
 ```
-### **Code Coverage**
+The project is containerized you can run the image by:
+
 ```
-Name                Stmts   Miss  Cover   Missing                                                 
--------------------------------------------------
-calc_unit_test.py      38      0   100%
-mycalculator.py        63      0   100%
+docker run aalbedhawi/learn-devops:latest
 ```
-Currently all python files are covered with test cases.
