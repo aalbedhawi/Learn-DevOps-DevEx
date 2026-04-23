@@ -27,6 +27,11 @@ calc_unit_test.py tests that the code, specifically the math functions perform a
 
 To get this code on your own machine you can clone the repo using git and HTTPS or SSH. 
 
+After cloning, all dependencies can be installed by running:
+```
+pip install -r requirements.txt
+```
+
 Recommended to use vscode, and the following optional extensions: python, python debugger, and python environment. 
 
 Running both the calculator and unittests can be done via:
